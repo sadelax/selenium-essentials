@@ -5,8 +5,8 @@
     <classes>
       <class name="com.qualitystream.testng.CrossBrowserTesting">
         <methods>
-          <include name="googleSearch"/>
           <include name="beforeClass"/>
+          <include name="googleSearch"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.qualitystream.testng.CrossBrowserTesting -->
