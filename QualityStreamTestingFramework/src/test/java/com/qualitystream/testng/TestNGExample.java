@@ -36,7 +36,7 @@ public class TestNGExample {
 		searchbox.sendKeys("blouse");
 		searchbox.submit();
 		
-		WebDriverWait ewait = new WebDriverWait(driver, Duration.ofSeconds(7));
+		WebDriverWait ewait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		ewait.until(ExpectedConditions.presenceOfElementLocated(resultsLocator));
 		
 		System.out.println("Resultado: " + driver.findElement(resultsLocator).getText());
