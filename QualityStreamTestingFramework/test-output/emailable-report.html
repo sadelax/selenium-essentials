@@ -8,12 +8,130 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17.464</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test on Chrome</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9.230</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test on Firefox</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">20.110</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Test on Edge</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">1.568</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">2</th><th class="num">0</th><th class="num attn">1</th><th class="num">30.908</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.qualitystream.testng.TestNGDataProviderExample</td><td><a href="#m0">login</a></td><td rowspan="2">1687870141289</td><td rowspan="2">7928</td></tr><tr class="passedeven"><td><a href="#m1">login</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test on Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m0">googleSearch</a></td><td rowspan="1">1687960842018</td><td rowspan="1">5213</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test on Firefox &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m1">beforeClass</a></td><td rowspan="1">1687960847357</td><td rowspan="1">20062</td></tr><tr><th colspan="4">Test on Firefox &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m2">afterClass</a></td><td rowspan="1">1687960867447</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test on Firefox &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m3">googleSearch</a></td><td rowspan="1">1687960867434</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Test on Edge &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m4">beforeClass</a></td><td rowspan="1">1687960867469</td><td rowspan="1">1554</td></tr><tr><th colspan="4">Test on Edge &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m5">afterClass</a></td><td rowspan="1">1687960869032</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test on Edge &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.qualitystream.testng.CrossBrowserTesting</td><td><a href="#m6">googleSearch</a></td><td rowspan="1">1687960869026</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.qualitystream.testng.TestNGDataProviderExample#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>email2@gmail.com</td><td>pass123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qualitystream.testng.TestNGDataProviderExample#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>email1@gmail.com</td><td>pass123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test on Chrome</h2><h3 id="m0">com.qualitystream.testng.CrossBrowserTesting#googleSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=114.0.5735.198)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2185caa8f9fcda9cd7c1bafd656dcf59, sendKeysToElement {id=EEFA5F75105DF64AF40CF1BE25C8CA97_element_3, value=[Ljava.lang.CharSequence;@3241713e}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.198, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\sandr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:30156}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:30156/devtoo..., se:cdpVersion: 114.0.5735.198, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2185caa8f9fcda9cd7c1bafd656dcf59)] -&gt; name: q]
+Session ID: 2185caa8f9fcda9cd7c1bafd656dcf59
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at com.qualitystream.testng.CrossBrowserTesting.googleSearch(CrossBrowserTesting.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test on Firefox</h2><h3 id="m1">com.qualitystream.testng.CrossBrowserTesting#beforeClass</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>https://www.google.com/</td><td>Firefox</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;SADELAX&apos;, ip: &apos;192.168.56.1&apos;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:549)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:154)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:151)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:146)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:100)
+	at com.qualitystream.testng.CrossBrowserTesting.beforeClass(CrossBrowserTesting.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	... 33 more
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qualitystream.testng.CrossBrowserTesting#afterClass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.qualitystream.testng.CrossBrowserTesting#googleSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;SADELAX&apos;, ip: &apos;192.168.56.1&apos;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:549)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:154)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:151)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:146)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:100)
+	at com.qualitystream.testng.CrossBrowserTesting.beforeClass(CrossBrowserTesting.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	... 33 more
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test on Edge</h2><h3 id="m4">com.qualitystream.testng.CrossBrowserTesting#beforeClass</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>https://www.google.com/</td><td>Edge</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 117
+Current browser version is 114.0.1823.58 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
+Host info: host: &apos;SADELAX&apos;, ip: &apos;192.168.56.1&apos;
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:154)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:107)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:59)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:55)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:47)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:43)
+	at com.qualitystream.testng.CrossBrowserTesting.beforeClass(CrossBrowserTesting.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.qualitystream.testng.CrossBrowserTesting#afterClass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.qualitystream.testng.CrossBrowserTesting#googleSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 117
+Current browser version is 114.0.1823.58 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
+Host info: host: &apos;SADELAX&apos;, ip: &apos;192.168.56.1&apos;
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:154)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:107)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:59)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:55)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:47)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:43)
+	at com.qualitystream.testng.CrossBrowserTesting.beforeClass(CrossBrowserTesting.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
