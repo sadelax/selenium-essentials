@@ -9,7 +9,9 @@ import static org.testng.Assert.assertTrue;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -53,30 +55,21 @@ public class CrossBrowserTesting {
 	@Test
 	public void googleSearch() {
 
-//		WebDriverWait cookies = new WebDriverWait(driver, Duration.ofSeconds(5));
-//		cookies.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".QS5gu sy4vM"))).click();
+//		System.out.println("google cookies: " + driver.manage().getCookies());
 
-		try {
-			Thread.sleep(5000);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-
-		System.out.println("rechazar todo ok");
+		driver.manage().deleteCookieNamed("CONSENT");
+		driver.manage().addCookie(new Cookie("CONSENT", "YES+"));
+		driver.navigate().refresh();
 
 		WebElement searchbox = driver.findElement(searchboxLocator);
 		searchbox.clear();
-		System.out.println("buscar...");
 		searchbox.sendKeys("youtube");
-		System.out.println("...youtube");
 		searchbox.submit();
-		System.out.println("submit");
 
 		WebDriverWait wdw = new WebDriverWait(driver, Duration.ofSeconds(7));
 		wdw.until(ExpectedConditions.presenceOfElementLocated(foundLocator));
 
 		assertTrue(driver.findElement(foundLocator).isDisplayed(), "no se encuentra");
-
 	}
 
 	@AfterClass
