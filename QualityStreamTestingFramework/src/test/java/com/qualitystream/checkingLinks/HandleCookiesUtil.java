@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class HandleCookiesUtil {
 
 	WebDriver driver;
-	By consentFrameLocator = By.cssSelector("iframe#gdpr-consent-notice");
-	By acceptCookiesBtnLocator = By.cssSelector("button#save.mat-button.mat-raised-button");
 
 	public HandleCookiesUtil(WebDriver driver) {
 		this.driver = driver;
@@ -20,6 +18,8 @@ public class HandleCookiesUtil {
 	
 	public void mercuryToursCookies() {
 		
+		By consentFrameLocator = By.cssSelector("iframe#gdpr-consent-notice");
+		By acceptCookiesBtnLocator = By.cssSelector("button#save.mat-button.mat-raised-button");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement consentFrameElement = wait.until(ExpectedConditions.presenceOfElementLocated(consentFrameLocator));
 		
