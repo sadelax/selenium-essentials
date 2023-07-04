@@ -1,4 +1,4 @@
-package com.qualitystream.testng;
+package example.various.testng;
 
 import static org.testng.Assert.assertEquals;
 

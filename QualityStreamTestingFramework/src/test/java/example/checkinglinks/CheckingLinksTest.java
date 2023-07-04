@@ -1,4 +1,4 @@
-package com.qualitystream.checkingLinks;
+package example.checkinglinks;
 
 import static org.testng.Assert.assertTrue;
 

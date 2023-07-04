@@ -1,4 +1,4 @@
-package screenshot.example;
+package example.screenshot;
 
 import static org.junit.Assert.*;
 
@@ -22,7 +22,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.qualitystream.checkingLinks.HandleCookiesUtil;
+import example.checkinglinks.HandleCookiesUtil;
 
 public class ScreenshotTest {
 

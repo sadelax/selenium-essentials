@@ -1,4 +1,4 @@
-package com.qualitystream.testng;
+package example.downloadfile;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;

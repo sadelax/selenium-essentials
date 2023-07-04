@@ -1,4 +1,4 @@
-package com.qualitystream.testng;
+package example.downloadfile;
 
 import static org.testng.Assert.assertTrue;
 
