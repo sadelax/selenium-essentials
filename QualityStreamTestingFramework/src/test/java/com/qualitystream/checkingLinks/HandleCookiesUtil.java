@@ -3,6 +3,7 @@ package com.qualitystream.checkingLinks;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,5 +34,11 @@ public class HandleCookiesUtil {
 		
 		driver.switchTo().defaultContent();
 		System.out.println("vuelta al contexto ppal");
+	}
+	
+	public void googleSearchCookies() {
+		driver.manage().deleteCookieNamed("CONSENT");
+		driver.manage().addCookie(new Cookie("CONSENT", "YES+"));
+		driver.navigate().refresh(); 
 	}
 }
