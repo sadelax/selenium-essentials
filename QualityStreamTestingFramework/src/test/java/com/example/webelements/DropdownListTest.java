@@ -1,4 +1,4 @@
-package com.webElements.packg;
+package com.example.webelements;
 
 import static org.junit.Assert.*;
 

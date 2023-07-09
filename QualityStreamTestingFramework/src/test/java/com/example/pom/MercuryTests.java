@@ -1,4 +1,4 @@
-package com.project.pom;
+package com.example.pom;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

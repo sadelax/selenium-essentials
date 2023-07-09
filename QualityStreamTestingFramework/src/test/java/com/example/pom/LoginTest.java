@@ -1,4 +1,4 @@
-package com.project.pom;
+package com.example.pom;
 
 import static org.junit.Assert.*;
 

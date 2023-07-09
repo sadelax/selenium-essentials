@@ -1,4 +1,4 @@
-package com.project.pom;
+package com.example.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
