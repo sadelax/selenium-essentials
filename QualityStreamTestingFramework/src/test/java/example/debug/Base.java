@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,14 +16,23 @@ public class Base {
 
 	private WebDriver driver;
 
-	public Base(WebDriver driver) {
-		this.driver = driver;
+	/**
+	 * método para conectarme a google chrome
+	 * 
+	 * @return WebDriver driver
+	 */
+	public WebDriver chromeDriverConnection() {
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		return driver;
 	}
 
-	// método para conectarme a google chrome
-	public WebDriver chromeDriverConnection() {
-		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe");
-		driver = new ChromeDriver();
+	/**
+	 * método para obtener el driver (y así poder utilizar sus métodos)
+	 * 
+	 * @return el driver de Chrome Driver
+	 */
+	public WebDriver getDriver() {
 		return driver;
 	}
 
@@ -46,6 +56,7 @@ public class Base {
 
 	/**
 	 * encuentra y devuelve el texto del elemento q paso como parámetro
+	 * 
 	 * @param element - elemento que paso como parámetro
 	 * @return el elemento en forma de texto
 	 */
@@ -59,8 +70,9 @@ public class Base {
 
 	/**
 	 * uso del comando sendkeys
+	 * 
 	 * @param inputText - es el texto q queremos escribir
-	 * @param locator - localiza el elemento donde queremos escribir
+	 * @param locator   - localiza el elemento donde queremos escribir
 	 */
 	public void type(String inputText, By locator) {
 		driver.findElement(locator).sendKeys(inputText);
@@ -68,19 +80,21 @@ public class Base {
 
 	/**
 	 * uso del método click
+	 * 
 	 * @param locator
 	 */
 	public void click(By locator) {
 		driver.findElement(locator).click();
-		;	
+		;
 	}
-	
+
 	public void click(WebElement element) {
 		element.click();
 	}
 
 	/**
 	 * nos dice que el elemento se encuentra listo para ser utilizado
+	 * 
 	 * @param locator
 	 * @return
 	 */
@@ -94,16 +108,21 @@ public class Base {
 
 	/**
 	 * método get, encargado de recibir la url y abrir la página
+	 * 
 	 * @param url
 	 */
 	public void visit(String url) {
 		driver.get(url);
 	}
-	
+
 	/**
-	 * Proporciona una espera explícita antes de realizar una acción durante un tiempo especificado en milisegundos.
-	 * @param milisegundos el número de milisegundos que se desea esperar antes de realizar el clic.
-	 * @throws InterruptedException si se produce una interrupción mientras se espera.
+	 * Proporciona una espera explícita antes de realizar una acción durante un
+	 * tiempo especificado en milisegundos.
+	 * 
+	 * @param milisegundos el número de milisegundos que se desea esperar antes de
+	 *                     realizar el clic.
+	 * @throws InterruptedException si se produce una interrupción mientras se
+	 *                              espera.
 	 */
 	public void espera(int milisegundos) {
 		try {
@@ -112,10 +131,11 @@ public class Base {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	/**
-	 * Espera hasta que un elemento esté presente en la página dentro de un tiempo límite.
+	 * Espera hasta que un elemento esté presente en la página dentro de un tiempo
+	 * límite.
+	 * 
 	 * @param timeout el tiempo máximo de espera en milisegundos.
 	 * @param locator el localizador del elemento que se espera encontrar.
 	 */
@@ -124,4 +144,9 @@ public class Base {
 		ewait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
 
+	public void googleCookies() {
+		driver.manage().deleteCookieNamed("CONSENT");
+		driver.manage().addCookie(new Cookie("CONSENT", "YES+"));
+		driver.navigate().refresh();
+	}
 }

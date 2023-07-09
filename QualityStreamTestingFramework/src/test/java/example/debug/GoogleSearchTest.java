@@ -1,25 +1,33 @@
 package example.debug;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.By;
 
 public class GoogleSearchTest {
 
-	@BeforeAll
-	public void setUp() throws Exception {
-	}
+	static GoogleSearchPage page;
+	By foundLocator = By.cssSelector("a[href=\"https://www.youtube.com/?gl=ES&hl=es\"]");
 
-	@After
-	public void tearDown() throws Exception {
+	@Before
+	public void setUp() throws Exception {
+		page = new GoogleSearchPage();
+		page.chromeDriverConnection();
 	}
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		page.visit("https://www.google.com/");
+		page.googleCookies();
+		page.search("youtube");
+		
+		// expected fail on purpose
+		String expected = "youtube";
+		
+		String realTitle = page.getDriver().getTitle();
+				
+		assertEquals(expected, realTitle);
 	}
-
 }
