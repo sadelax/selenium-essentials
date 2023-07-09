@@ -1,4 +1,4 @@
-package com.example.pom;
+package example.pageobjectmodel;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

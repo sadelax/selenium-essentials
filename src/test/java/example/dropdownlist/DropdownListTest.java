@@ -1,4 +1,4 @@
-package com.example.webelements;
+package example.dropdownlist;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package com.example.pom;
+package example.pageobjectmodel;
 
 import java.time.Duration;
 import java.util.List;

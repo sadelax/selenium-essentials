@@ -1,10 +1,10 @@
-package com.example.webelements;
+package example.dropdownlist;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.example.pom.Base;
+import example.pageobjectmodel.Base;
 
 /**
  * @author sandr En esta clase implemento la automatización de un dropdownlist

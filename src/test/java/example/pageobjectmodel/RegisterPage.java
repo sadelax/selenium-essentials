@@ -1,12 +1,10 @@
-package com.example.pom;
+package example.pageobjectmodel;
 
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import net.bytebuddy.asm.Advice.Enter;
 
 /**
  * @author sandr
